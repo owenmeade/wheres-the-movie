@@ -10,11 +10,23 @@
 </head>
 <body>
     <header>
-
+        Where's The Movie
     </header>
-    <main>
-        <div>
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
         <!--Search bar for movies-->
+                <h3>Search name of movie</h3>
+                <input  name="search" id="search" type="text" class="search-input"/>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                 <button class="btn btn-primary" type="button">Search</button>
+                </div>
+                <h2 class="subtitle">Movie list: <span id="movie-list"></span></h2>
+                </div>
+                </div>
+             </div>
         </div>
 
         <div>
