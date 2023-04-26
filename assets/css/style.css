@@ -10,3 +10,26 @@ header {
     text-size-adjust: 5px;
     font-family: 'Merriweather', serif;
 }
+
+body {
+   background-color: lightgray;
+}
+
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    border-color: black;
+    border-bottom-color: black;
+    border-width: 4px;
+    border-radius: 5%;
+    min-height: 400px;
+    min-width: 550px;
+    margin: 10px;
+}
+
+.quoteBox {
+    text-align: center;
+}
+
+
