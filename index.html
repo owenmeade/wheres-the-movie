@@ -28,39 +28,47 @@
             <div class="card-body">
               <!--Search bar for movies-->
               <h3>Search name of movie</h3>
-              <input
-                name="search"
-                id="search"
-                type="text"
-                class="search-input"
-              />
+              <form id="form">
+              <input name="search" id="search" type="text" class="search-input"/>
               <div class="d-grid gap-2 col-6 pt-4 pb-4">
-                <button id= "btn" class="btn btn-primary" type="button">Search</button>
+                <button id= "btn" class="btn btn-primary" type="submit">Search</button>
               </div>
+            </form>
               <h2 class="subtitle">
-                Movie list: <span id="movie-list"></span>
+                Movie list: 
+                  <p id="movie-list"></p>
+                  <p id="movieyear"></p>
+                  <img id="poster1">
+                  <p id="movie-list2"></p>
+                  <p id="movieyear2"></p>
+                  <img id="poster2">
+                  <p id="movie-list3"></p>
+                  <p id="movieyear3"></p>
+                  <img id="poster3">
+                  <p id="movie-list4"></p>
+                  <p id="movieyear4"></p>
+                  <img id="poster4">
+                  <p id="movie-list5"></p>
+                  <p id="movieyear5"></p>
+                  <img id="poster5">
               </h2>
             </div>
           </div>
         </div>
       </div>
 
-            <!--Quotes from movies-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="card">
-                            <div class="card-quote-body">
-                                <blockquote class="blockquote mb-0">
-                                    <p id="quote-text">Quote goes here</p>
-                                    <footer class="blockquote-footer">
-                                        <cite id="source-author">Author goes here</cite>
-                                    </footer>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!--Quotes from movies-->
+
+      <div class="row quote">
+        <div class="col">
+          <div class="card quoteBox">
+            <div class="card-quote-body">
+              <blockquote class="blockquote mb-0">
+                <p id="quoteText">Quote goes here</p>
+                <footer class="blockquote-footer">
+                  <cite id="source-author">Author goes here</cite>
+                </footer>
+              </blockquote>
             </div>
 
     <script
