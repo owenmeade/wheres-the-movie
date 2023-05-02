@@ -27,6 +27,7 @@ function getMovie(movie) {
   })
 }
 
+
 searchBtn.addEventListener("click", function(event){
   event.preventDefault();
   var movie = document.getElementById('search').value;
@@ -34,5 +35,3 @@ searchBtn.addEventListener("click", function(event){
   console.log(movie);
   getMovie(movie);
 });
-
-
