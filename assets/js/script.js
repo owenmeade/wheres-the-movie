@@ -33,6 +33,24 @@ searchBtn.addEventListener("click", function(event){
   movie.trim();
   console.log(movie);
   getMovie(movie);
+  getQuote();
 });
 
 
+function getQuote() {
+  var category = 'movies'
+  $.ajax({
+      method: 'GET',
+      url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
+      headers: { 'X-Api-Key': 'ziO2ZBLwqWNOc5uWji+jXg==RxSaAH1p3fJU353M'},
+      contentType: 'application/json',
+      success: function(result) {
+          console.log(result);
+          $('#quoteText').text(result[0].quote);
+          $('#source-author').text(result[0].author);
+      },
+      error: function ajaxError(jqXHR) {
+          console.error('Error: ', jqXHR.responseText);
+      }
+  });
+};
