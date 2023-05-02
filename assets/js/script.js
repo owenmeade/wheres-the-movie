@@ -1,3 +1,4 @@
+
 var searchBtn = document.getElementById('btn');
 var form = $('#form');
 
@@ -54,3 +55,4 @@ function getQuote() {
       }
   });
 };
+
