@@ -1,6 +1,6 @@
 
 header {
-    background-color: #ff4d4d;
+    background-color: #f36464;
     text-align: center;
     margin: 15px;
     padding: 20px;
@@ -24,19 +24,21 @@ body {
     border-bottom-color: black;
     border-width: 4px;
     border-radius: 5%;
-    min-height: 400px;
-    min-width: 550px;
     margin: 10px;
+    background-color: #ee9494;
 }
 
-.quoteBox {
-    text-align: center;
+.card.quoteBox {
+        text-align: center;
 }
 
 h2 p {
     font-family: 'Merriweather', serif;
     font-size: 25px;
-    outline: solid 1px black;
+}
+
+#source-author {
+    color: black;
 }
 
 img {
@@ -46,4 +48,8 @@ img {
 
 }
 
+.outline {
+    outline: solid 1px black;
 
+
+}
