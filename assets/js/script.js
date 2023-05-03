@@ -10,20 +10,20 @@ function getMovie(movie) {
   .then(function (data) {
     console.log(data);
     // for (var i = 0; i < data.length ; i++)
-    $('#movie-list').text(data.Search[0].Title);
-    $('#movieyear').text(data.Search[0].Year);
+    $('#movie-list').text(data.Search[0].Title).addClass("outline");
+    $('#movieyear').text(data.Search[0].Year).addClass("outline");
     $('#poster1').attr("src", data.Search[0].Poster);
-    $('#movie-list2').text(data.Search[1].Title);
-    $('#movieyear2').text(data.Search[1].Year);
+    $('#movie-list2').text(data.Search[1].Title).addClass("outline");
+    $('#movieyear2').text(data.Search[1].Year).addClass("outline");
     $('#poster2').attr("src", data.Search[1].Poster);
-    $('#movie-list3').text(data.Search[2].Title);
-    $('#movieyear3').text(data.Search[2].Year);
+    $('#movie-list3').text(data.Search[2].Title).addClass("outline");
+    $('#movieyear3').text(data.Search[2].Year).addClass("outline");
     $('#poster3').attr("src", data.Search[2].Poster);
-    $('#movie-list4').text(data.Search[3].Title);
-    $('#movieyear4').text(data.Search[3].Year);
+    $('#movie-list4').text(data.Search[3].Title).addClass("outline");
+    $('#movieyear4').text(data.Search[3].Year).addClass("outline");
     $('#poster4').attr("src", data.Search[3].Poster);
-    $('#movie-list5').text(data.Search[4].Title);
-    $('#movieyear5').text(data.Search[4].Year);
+    $('#movie-list5').text(data.Search[4].Title).addClass("outline");
+    $('#movieyear5').text(data.Search[4].Year).addClass("outline");
     $('#poster5').attr("src", data.Search[4].Poster);
   })
 }
