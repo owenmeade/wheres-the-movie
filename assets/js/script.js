@@ -3,7 +3,7 @@ var searchBtn = document.getElementById('btn');
 var form = $('#form');
 
 function getMovie(movie) {
-  var requestMovieUrl = "http://www.omdbapi.com/?apikey=c6fae28f&s=" + movie + "&page=5&type=movie&y";
+  var requestMovieUrl = "https://www.omdbapi.com/?apikey=c6fae28f&s=" + movie + "&page=5&type=movie&y";
   fetch(requestMovieUrl).then(function (response) {
     return response.json();
   })
@@ -36,6 +36,7 @@ searchBtn.addEventListener("click", function(event){
   console.log(movie);
   getMovie(movie);
   getQuote();
+  saveHistory();
 });
 
 
@@ -57,3 +58,34 @@ function getQuote() {
   });
 };
 
+var clearHistEl = $('#clearHist');
+var searchHistoryEl = $('#searchHist');
+var historyList = [JSON.parse(localStorage.getItem('movie'))];
+
+function saveHistory() {
+  var movieEntered = $('#search').val();
+  historyList.push(movieEntered);
+  localStorage.setItem('movie', JSON.stringify(historyList));
+  loadHistory();
+}
+
+function pullHist(fromHistory){
+  getMovie(fromHistory);
+}
+
+function loadHistory() {
+  searchHistoryEl.text('');
+  for (var i = 0; i < historyList.length; i++)
+  $('<button class="btn" type="button">').text(historyList[i]).attr("onclick","pullHist('" + historyList[i] + "')").appendTo(searchHistoryEl);
+};
+
+function clearHist() {
+  localStorage.clear();
+  historyList = [];
+  loadHistory();
+}
+
+
+clearHistEl.on('click', clearHist);
+
+loadHistory();
